@@ -12,13 +12,7 @@ jobs:
     - name: Set up Python 3.7
       uses: actions/setup-python@v1
       with:
-        python-version: 3.7
-    - name: Add Key to Clone Private Repos
-      with:
-        ssh-private-key: ${{ secrets.FRACDIFF_DEPLOYKEY }}
-    - run: |
-        sh-add -l
-        echo SSH_AUTH_SOCK is at $SSH_AUTH_SOCK     
+        python-version: 3.7  
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
