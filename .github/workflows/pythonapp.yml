@@ -18,7 +18,6 @@ jobs:
         DEPLOY_KEY: ${{ secrets.FRACDIFF_DEPLOYKEY }}
         GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
       run: |
-        eval "$(ssh-agent -s)"
         ssh-add - <<< "${DEPLOY_KEY}"      
     - name: Install dependencies
       run: |
