@@ -14,13 +14,12 @@ jobs:
       with:
         python-version: 3.7
     - name: Add Key to Clone Private Repos
-      env:
-        DEPLOY_KEY: ${{ secrets.FRACDIFF_DEPLOYKEY }}
-        GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
+      uses: ./
+      with:
+        ssh-private-key: ${{ secrets.FRACDIFF_DEPLOYKEY }}
       run: |
-        apt-get install -y openssh-client
-        eval "$(ssh-agent -s)"
-        ssh-add - <<< "${DEPLOY_KEY}"      
+        sh-add -l
+        echo SSH_AUTH_SOCK is at $SSH_AUTH_SOCK     
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
