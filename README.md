@@ -16,7 +16,7 @@ Determine fractal order by the ADF test
 The `fracadf` [git repo](http://github.com/ulf1/fracadf) is a private package that needs to be installed from github
 
 ```
-pip install git+git@github.com:ulf1/fracadf.git
+pip install git+ssh://git@github.com/ulf1/fracadf.git
 ```
 
 ## Install a virtual env
