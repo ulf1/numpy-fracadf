@@ -7,7 +7,7 @@ def read(fname):
 
 
 setup(name='fracadf',
-      version='0.1.0',
+      version='0.1.1',
       description='Determine fractal order by the ADF test',
       long_description=read('README.md'),
       long_description_content_type='text/markdown',
@@ -20,6 +20,8 @@ setup(name='fracadf',
           'setuptools>=40.0.0',
           'numpy>=1.14.5',
           'scipy>=1.3.3',
-          'statsmodels>=0.10.2'],
-      python_requires='>=3.7',
+          'statsmodels>=0.10.2',
+          'fracdiff>=0.1.1'
+      ],
+      python_requires='>=3.5',
       zip_safe=False)
