@@ -1,6 +1,3 @@
-<!-- [![Build Status](https://travis-ci.org/ulf1/fracadf.svg?branch=master)](https://travis-ci.org/ulf1/fracadf)
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/ulf1/fracadf/master?urlpath=lab) -->
-
 # fracadf
 Determine fractal order by the ADF test
 
