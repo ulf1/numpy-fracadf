@@ -11,7 +11,7 @@ pip install git+ssh://git@github.com/ulf1/numpy-fracadf.git
 
 
 ## Usage
-Check the [examples](http://github.com/ulf1/fracadf/examples) folder for notebooks.
+Check the [examples](http://github.com/ulf1/numpy-fracadf/examples) folder for notebooks.
 
 
 ## Commands
