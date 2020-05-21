@@ -10,7 +10,8 @@ def loss_fn(d: float, x: np.array, alpha: float, n_trunc: int) -> float:
     return pval - alpha  # for Bisection
 
 
-def fracadf(X: np.array, alpha: float = 0.01, xtol: float = None, n_trunc: int = 100) -> float:
+def fracadf(X: np.array, alpha: float = 0.01, xtol: float = None,
+            n_trunc: int = 100) -> float:
     if not xtol:
         xtol = alpha * .01
 
