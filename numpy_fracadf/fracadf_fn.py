@@ -1,5 +1,5 @@
 import numpy as np
-from fracdiff import fracdiff
+from numpy_fracdiff import fracdiff
 from statsmodels.tsa.stattools import adfuller
 from scipy.optimize import ridder
 
