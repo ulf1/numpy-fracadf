@@ -6,8 +6,8 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 
-setup(name='fracadf',
-      version='0.1.1',
+setup(name='numpy-fracadf',
+      version='0.2.0',
       description='Determine fractal order by the ADF test',
       long_description=read('README.md'),
       long_description_content_type='text/markdown',
@@ -15,13 +15,13 @@ setup(name='fracadf',
       author='Ulf Hamster',
       author_email='554c46@gmail.com',
       license='MIT',
-      packages=['fracadf'],
+      packages=['numpy_fracadf'],
       install_requires=[
           'setuptools>=40.0.0',
-          'numpy>=1.14.5',
-          'scipy>=1.3.3',
-          'statsmodels>=0.10.2',
-          'fracdiff>=0.1.1'
+          'numpy>=1.18.*',
+          'scipy>=1.4.*',
+          'statsmodels>=0.11.*',
+          'numpy-fracdiff>=0.3.1'
       ],
-      python_requires='>=3.5',
+      python_requires='>=3.6',
       zip_safe=False)
