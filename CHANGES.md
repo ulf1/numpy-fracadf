@@ -1,3 +1,9 @@
+# 0.3.0 / 2020-05-22
+
+   * other loss function: DF statistics must be less than 1% critical value
+   * fminbound solver instead of ridder
+   * desired differentiation order range can be specified
+
 # 0.2.0 / 2020-05-21
 
    * License changed from copyright to MIT

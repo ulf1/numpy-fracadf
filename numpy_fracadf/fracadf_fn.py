@@ -1,25 +1,28 @@
 import numpy as np
 from numpy_fracdiff import fracdiff
 from statsmodels.tsa.stattools import adfuller
-from scipy.optimize import ridder
+import scipy.optimize
 
 
-def loss_fn(d: float, x: np.array, alpha: float, n_trunc: int) -> float:
+def loss_fn(d: float, x: np.array, n_trunc: int) -> float:
     z = fracdiff(x, order=d, truncation=n_trunc)
-    _, pval, _, _, _, _ = adfuller(z[n_trunc:], regression='c', autolag='BIC')
-    return pval - alpha  # for Bisection
+    stat, pval, _, _, crit, _ = adfuller(
+        z[n_trunc:], regression='c', autolag='BIC')
+    return (stat - crit['1%'])**2 + pval**2
 
 
-def fracadf(X: np.array, alpha: float = 0.01, xtol: float = None,
-            n_trunc: int = 100) -> float:
-    if not xtol:
-        xtol = alpha * .01
-
+def fracadf(X: np.array, n_trunc: int = 100,
+            lb: float = 0.01, ub: float = 1.5,
+            xtol: float = 1e-4, n_maxiter: int = 200) -> float:
     if len(X.shape) == 1:
-        return ridder(loss_fn, 0, 1, args=(X, alpha, n_trunc), xtol=xtol)
+        return scipy.optimize.fminbound(
+            loss_fn, lb, ub, args=(X, n_trunc),
+            xtol=xtol, maxfun=n_maxiter)
 
     n_features = X.shape[1]
     d = np.empty((n_features,))
     for j in range(n_features):
-        d[j] = ridder(loss_fn, 0, 1, args=(X[:, j], alpha, n_trunc), xtol=xtol)
+        d[j] = scipy.optimize.fminbound(
+            loss_fn, lb, ub, args=(X[:, j], n_trunc),
+            xtol=xtol, maxfun=n_maxiter)
     return d
