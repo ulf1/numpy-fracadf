@@ -11,9 +11,10 @@ def loss_fn(d: float, x: np.array, n_trunc: int) -> float:
     return (stat - crit['1%'])**2 + pval**2
 
 
-def fracadf(X: np.array, n_trunc: int = 100,
-            lb: float = 0.01, ub: float = 1.5,
-            xtol: float = 1e-4, n_maxiter: int = 200) -> float:
+def fracadf1(X: np.array, n_trunc: int = 100,
+             lb: float = 0.01, ub: float = 1.5,
+             xtol: float = 1e-4, n_maxiter: int = 200) -> float:
+    """constant truncation order"""
     if len(X.shape) == 1:
         return scipy.optimize.fminbound(
             loss_fn, lb, ub, args=(X, n_trunc),
