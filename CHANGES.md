@@ -1,3 +1,8 @@
+# 0.4.0 / 2020-05-23
+
+   * fracadf1 for const truncation order, and 
+     fracadf2 for flexible truncation order 
+
 # 0.3.0 / 2020-05-22
 
    * other loss function: DF statistics must be less than 1% critical value

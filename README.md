@@ -11,6 +11,11 @@ pip install git+ssh://git@github.com/ulf1/numpy-fracadf.git
 
 
 ## Usage
+```python
+from numpy_fracadf import fracadf2
+d = fracadf2(X, tau=1e-4, mmax=527)
+```
+
 Check the [examples](http://github.com/ulf1/numpy-fracadf/examples) folder for notebooks.
 
 
