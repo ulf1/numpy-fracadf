@@ -19,4 +19,4 @@ setup(name='numpy-fracadf',
           'numpy-fracdiff>=0.3.1'
       ],
       python_requires='>=3.6',
-      zip_safe=False)
+      zip_safe=True)
