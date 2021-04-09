@@ -1,16 +1,5 @@
-# syntax check, unit test, profiling
-flake8>=3.7.*
-pytest>=5.3.*
-twine>=3.1.*
-
 # pypi packages
-numpy>=1.18.*
-scipy>=1.4.*
+numpy>=1.18.*,<2
+scipy>=1.4.*,<2
 statsmodels>=0.11.*
 numpy-fracdiff>=0.3.1
-
-# Jupyter
-jupyterlab>=1.2.*
-matplotlib>=3.1.*
-quandl>=3.5.*
-pandas>=1.0.*

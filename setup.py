@@ -23,8 +23,8 @@ setup(name='numpy-fracadf',
       packages=['numpy_fracadf'],
       install_requires=[
           'setuptools>=40.0.0',
-          'numpy>=1.18.*',
-          'scipy>=1.4.*',
+          'numpy>=1.18.*,<2',
+          'scipy>=1.4.*,<2',
           'statsmodels>=0.11.*',
           'numpy-fracdiff>=0.3.1'
       ],
