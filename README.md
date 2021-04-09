@@ -1,4 +1,7 @@
-# fracadf
+[![PyPI version](https://badge.fury.io/py/numpy-fracadf.svg)](https://badge.fury.io/py/numpy-fracadf)
+
+
+# numpy-fracadf
 Determine fractal order by the ADF test
 
 ## Installation 
@@ -11,7 +14,7 @@ pip install git+ssh://git@github.com/ulf1/numpy-fracadf.git
 
 
 ## Usage
-```python
+```py
 from numpy_fracadf import fracadf2
 d = fracadf2(X, tau=1e-4, mmax=527)
 ```
@@ -19,24 +22,26 @@ d = fracadf2(X, tau=1e-4, mmax=527)
 Check the [examples](http://github.com/ulf1/numpy-fracadf/examples) folder for notebooks.
 
 
-## Commands
-Install a virtual env
+## Appendix
 
-```
+### Install a virtual env
+
+```sh
 python3.6 -m venv .venv
 source .venv/bin/activate
 pip3 install --upgrade pip
 pip3 install -r requirements.txt
 ```
 
-Python commands
+### Python commands
 
 * Jupyter for the examples: `jupyter lab`
 * Check syntax: `flake8 --ignore=F401 --exclude=$(grep -v '^#' .gitignore | xargs | sed -e 's/ /,/g')`
 * Upload to PyPi with twine: `python setup.py sdist && twine upload -r pypi dist/*`
 
-Clean up
-```
+### Clean up
+
+```sh
 find . -type f -name "*.pyc" | xargs rm
 find . -type d -name "__pycache__" | xargs rm -r
 rm -r .pytest_cache
