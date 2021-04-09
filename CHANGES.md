@@ -1,3 +1,7 @@
+# 0.4.1 / 2021-04-08
+
+  * MIT License changed to Apache 2.0
+
 # 0.4.0 / 2020-05-23
 
    * fracadf1 for const truncation order, and 
