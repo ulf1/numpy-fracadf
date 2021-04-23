@@ -1,4 +1,5 @@
 [![PyPI version](https://badge.fury.io/py/numpy-fracadf.svg)](https://badge.fury.io/py/numpy-fracadf)
+[![numpy-fracadf](https://snyk.io/advisor/python/numpy-fracadf/badge.svg)](https://snyk.io/advisor/python/numpy-fracadf)
 
 
 # numpy-fracadf
