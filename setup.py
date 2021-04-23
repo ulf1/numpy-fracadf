@@ -19,14 +19,13 @@ setup(name='numpy-fracadf',
       url='http://github.com/ulf1/fracadf',
       author='Ulf Hamster',
       author_email='554c46@gmail.com',
-      license='MIT',
+      license='Apache License 2.0',
       packages=['numpy_fracadf'],
       install_requires=[
-          'setuptools>=40.0.0',
           'numpy>=1.18.*,<2',
           'scipy>=1.4.*,<2',
           'statsmodels>=0.11.*',
           'numpy-fracdiff>=0.3.1'
       ],
       python_requires='>=3.6',
-      zip_safe=True)
+      zip_safe=False)
