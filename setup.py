@@ -1,5 +1,4 @@
 from setuptools import setup
-import pypandoc
 
 
 def get_version(path):
@@ -15,7 +14,7 @@ def get_version(path):
 setup(name='numpy-fracadf',
       version=get_version("numpy_fracadf/__init__.py"),
       description='Determine fractal order by the ADF test',
-      long_description=pypandoc.convert('README.md', 'rst'),
+      long_description='README.rst',
       url='http://github.com/ulf1/fracadf',
       author='Ulf Hamster',
       author_email='554c46@gmail.com',
@@ -28,4 +27,4 @@ setup(name='numpy-fracadf',
           'numpy-fracdiff>=0.3.1'
       ],
       python_requires='>=3.6',
-      zip_safe=False)
+      zip_safe=True)
