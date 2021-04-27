@@ -109,3 +109,4 @@ venv.bak/
 profile/data*
 .venv
 examples/data
+README.rst
