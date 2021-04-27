@@ -1,4 +1,5 @@
 [![PyPI version](https://badge.fury.io/py/numpy-fracadf.svg)](https://badge.fury.io/py/numpy-fracadf)
+[![numpy-fracadf](https://snyk.io/advisor/python/numpy-fracadf/badge.svg)](https://snyk.io/advisor/python/numpy-fracadf)
 
 
 # numpy-fracadf
@@ -39,7 +40,14 @@ pip3 install -r requirements-demo.txt
 
 * Jupyter for the examples: `jupyter lab`
 * Check syntax: `flake8 --ignore=F401 --exclude=$(grep -v '^#' .gitignore | xargs | sed -e 's/ /,/g')`
-* Upload to PyPi with twine: `python setup.py sdist && twine upload -r pypi dist/*`
+
+Publish
+
+```sh
+pandoc README.md --from markdown --to rst -s -o README.rst
+python setup.py sdist 
+twine upload -r pypi dist/*
+```
 
 ### Clean up
 
