@@ -28,6 +28,9 @@ def fracadf2(X: np.array, tau: float = 1e-5, mmax: int = 4092,
         1e-5   4092
         1e-6  33243
     """
+    if X.shape[0] <= 30:
+        raise ValueError("X must contain more than 30 observations")
+
     # ensure that the truncation order does not exceed n_obs-30
     mmax_ = min(X.shape[0] - 30, mmax)
 
