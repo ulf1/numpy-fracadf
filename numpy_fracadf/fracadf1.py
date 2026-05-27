@@ -18,6 +18,9 @@ def fracadf1(X: np.array, n_trunc: int = 100,
              lb: float = 0.01, ub: float = 1.5,
              xtol: float = 1e-4, n_maxiter: int = 200) -> float:
     """constant truncation order"""
+    if X.shape[0] <= 30:
+        raise ValueError("X must contain more than 30 observations")
+
     # ensure that the truncation order does not exceed n_obs-30
     n_trunc_ = min(X.shape[0] - 30, n_trunc)
 
